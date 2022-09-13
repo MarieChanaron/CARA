@@ -6,6 +6,13 @@
     --charcoal: #1a1a1a;
     --ebony: #222;
     --grey: #465b52;
+    --palegrey: #cce7d0;
+    --palepink: #fddde4;
+    --palegreen: #cdebbc;
+    --paleblue: #d1e8f2;
+    --palenavy: #cdd4f8;
+    --palepurple: #f6dbf6;
+    --paleorange: #fff2e5;
 }
 
 
@@ -160,4 +167,63 @@ button {
     background-color: transparent;
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+
+/* FEATURES SECTION */
+
+#features {
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#features .feature-card {
+    padding: 25px 15px;
+    border: 1px solid var(--palegrey);
+    border-radius: 4px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#features .feature-card:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#features .feature-card img {
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+#features .feature-card h6 {
+    padding: 9px 8px 6px 8px;
+    color: var(--green);
+    border-radius: 4px;
+}
+
+#features .feature-card:nth-child(1) h6 {
+    background-color: var(--palepink);
+}
+
+#features .feature-card:nth-child(2) h6 {
+    background-color: var(--palegreen);
+}
+
+#features .feature-card:nth-child(3) h6 {
+    background-color: var(--paleblue);
+}
+
+#features .feature-card:nth-child(4) h6 {
+    background-color: var(--palenavy);
+}
+
+#features .feature-card:nth-child(5) h6 {
+    background-color: var(--palepurple);
+}
+
+#features .feature-card:nth-child(6) h6 {
+    background-color: var(--paleorange);
 }
