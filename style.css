@@ -1,20 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* {
-    font-family: 'Spartan', sans-serif;
+:root {
+    --mauve: #E3E6F3;
+    --green: #088178;
+    --charcoal: #1a1a1a;
+    --ebony: #222;
+    --grey: #465b52;
 }
 
+
+/* CSS RESET */
+
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+
+/* GLOBAL SETTINGS */
+
+html{
+    font-family: 'Spartan', sans-serif;
+    font-size: 62.5%;
+}
+
+
+h1 {
+    font-size: 5.0rem;
+    line-height: 6.4rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+h2 {
+    font-size: 4.6rem;
+    line-height: 5.4rem;
+    font-weight: 700;
+    color: var(--ebony);
+}
+
+h4 {
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--ebony);
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    color: var(--grey);
+    margin: 15px 0 20px 0;
+}
+
+
+/* HEADER */
+
 header {
-    padding: 20px 80px;
-    background-color: #E3E6F3;
+    padding: 0px 80px;
+    height: 8vh;
+    background-color: var(--mauve);
     box-shadow: 0px 5px 15px RGBa(0,0,0,0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    z-index: 2;
 }
 
 nav ul {
     display: flex;
+    align-items: baseline;
 }
 
 nav ul li {
@@ -25,14 +96,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--charcoal);
     transition: 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #088178;
+    color: var(--green);
 }
  
 nav ul li a:active {
@@ -40,18 +111,53 @@ nav ul li a:active {
 }
 
 nav ul li a:hover,
-nav ul li a.active{
-    color: #088178;
+nav ul li a.active {
+    color: var(--green);
 }
 
 nav ul li a:hover::after,
-nav ul li a.active::after{
+nav ul li a.active::after {
     content: "";
     width: 30%;
-    height: 2px;
-    background-color: #088178;
+    height: 0.2rem;
+    background-color: var(--green);
     z-index: 1;
     position: absolute;
-    bottom: -4px;
+    bottom: -0.4rem;
     left: 20px;
+}
+
+header nav i {
+    font-size: 2rem;
+}
+
+
+
+/* HERO SECTION */
+
+#hero {
+    background-image: url(img/hero4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 25% right 0;
+    background-color: var(--mauve);
+    height: 92vh;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+button {
+    border: none;
+    color: var(--green);
+    background-image: url(img/button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
