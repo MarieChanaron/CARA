@@ -15,6 +15,7 @@
     --palepurple: #f6dbf6;
     --paleorange: #fff2e5;
     --cart-bg: #e8f6ea;
+    --tomato: #ef3636;
     }
 
 
@@ -78,6 +79,24 @@ h6 {
     font-size: 1.2rem;
 }
 
+button.normal {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.normal:hover {
+    background-color: var(--green);
+    color: white;
+}
+
 p.subtitle {
     font-size: 1.6rem;
     color: var(--kaki);
@@ -86,6 +105,10 @@ p.subtitle {
 
 .section-p1 {
     padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0px;
 }
 
 
@@ -164,7 +187,6 @@ header nav i {
     background-position: top 25% right 0;
     background-color: var(--mauve);
     height: 92vh;
-    padding: 0px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,11 +212,18 @@ header nav i {
 
 #features {
     display: flex;
+    flex-basis: 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-wrap: wrap;
     justify-content: space-between;
+    justify-items: flex-start;
+
 }
 
 #features .feature-card {
     padding: 25px 15px;
+    margin: 20px;
     border: 1px solid var(--pastelmint);
     border-radius: 4px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
@@ -219,29 +248,12 @@ header nav i {
     border-radius: 4px;
 }
 
-#features .feature-card:nth-child(1) h6 {
-    background-color: var(--palepink);
-}
-
-#features .feature-card:nth-child(2) h6 {
-    background-color: var(--palegreen);
-}
-
-#features .feature-card:nth-child(3) h6 {
-    background-color: var(--paleblue);
-}
-
-#features .feature-card:nth-child(4) h6 {
-    background-color: var(--palenavy);
-}
-
-#features .feature-card:nth-child(5) h6 {
-    background-color: var(--palepurple);
-}
-
-#features .feature-card:nth-child(6) h6 {
-    background-color: var(--paleorange);
-}
+#features .feature-card:nth-child(1) h6 {background-color: var(--palepink);}
+#features .feature-card:nth-child(2) h6 {background-color: var(--palegreen);}
+#features .feature-card:nth-child(3) h6 {background-color: var(--paleblue);}
+#features .feature-card:nth-child(4) h6 {background-color: var(--palenavy);}
+#features .feature-card:nth-child(5) h6 {background-color: var(--palepurple);}
+#features .feature-card:nth-child(6) h6 {background-color: var(--paleorange);}
 
 
 /* FEATURED PRODUCTS */
@@ -250,6 +262,8 @@ header nav i {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: -0.5%;
+    padding-top: 40px;
 }
 
 #featured-products h2, 
@@ -260,11 +274,18 @@ header nav i {
 #featured-products .product-card {
     border: 1px solid var(--pastelmint);
     border-radius: 25px;
-    flex-basis: 23%;
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex-basis: 20%;
+    min-width: 250px;
+    margin: 20px 0.5%;
     padding: 10px 12px;
     position: relative;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transition: 0.2s ease;
+}
+
+#featured-products .product-card:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 #featured-products img {
@@ -302,14 +323,17 @@ header nav i {
 
 #featured-products i.fa-cart-shopping {
     font-size: 1.6rem;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
     background-color: var(--cart-bg);
     color: var(--green);
     border: 1px solid var(--pastelmint);
     border-radius: 50px;
     cursor: pointer;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 12px;
 }
 
@@ -318,3 +342,38 @@ header nav i {
     color: white;
 }
 
+
+/* REPAIR SERVICES CALL TO ACTION */
+
+#banner {
+    background-color: var(--ebony);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-image: url(img/banner/b2.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#banner .text h4,
+#banner .text h2 {
+    text-align: center;
+    color: white;
+}
+
+#banner .text h4 {
+    font-size: 1.6rem;
+}
+
+#banner .text h2 {
+    font-size: 30px;
+}
+
+#banner .text h2 span {
+    color: var(--tomato);
+}
+
+#banner button {
+    display: block;
+    margin: 15px auto 0px auto;
+}
