@@ -7,6 +7,7 @@
     --ebony: #222;
     --kaki: #465b52;
     --grey: #606063;
+    --smokyblue: #818ea0;
     --pastelmint: #cce7d0;
     --palepink: #fddde4;
     --palegreen: #cdebbc;
@@ -17,6 +18,8 @@
     --cart-bg: #e8f6ea;
     --tomato: #ef3636;
     --coral: #ec544e;
+    --navy: #041e42;
+    --honey: #ffbd27;
     }
 
 
@@ -475,4 +478,62 @@ header nav i {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--coral);
+}
+
+
+/* NEWSLETTER */
+
+#newsletter {
+    background-color: var(--navy);
+    background-image: url(img/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: top 20% left 30%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#newsletter h4 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+#newsletter p {
+    font-size: 1.4rem;
+    padding: 20px 0;
+    font-weight: 600;
+    color: var(--smokyblue);
+}
+
+#newsletter p span {
+    color: var(--honey);
+}
+
+#newsletter form {
+    width: 30%;
+    display: flex;
+}
+
+#newsletter form input {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+#newsletter form input[type="email"] {
+    border-radius: 4px 0 0 4px;
+    flex-grow: 1;    
+}
+
+#newsletter form input[type="submit"] {
+    font-weight: 600;
+    color: white;
+    background-color: var(--green);
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
 }
