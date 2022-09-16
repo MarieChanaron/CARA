@@ -850,19 +850,23 @@ footer #copyright {
     .products .product-card {
         flex-basis: 100%;
     }
+    #newsletter #form {
+        width: 100%;
+    }
     #newsletter form {
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: flex-end;
         flex-wrap: wrap;
     }
     #newsletter form input[type="email"] {
         border-radius: 4px;
-        margin: auto;
     }
     #newsletter form input[type="submit"] {
         border-radius: 4px;
         margin: 10px auto 0;
+        padding: 15px 30px;
     }
 }
 
