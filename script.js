@@ -6,9 +6,9 @@ const footer = document.querySelector('footer');
 
 function slideIn() {
     const blackOverlay = document.createElement('div');
-    blackOverlay.style.width = '100vw';
-    blackOverlay.style.height = '100%';
-    blackOverlay.style.backgroundColor = 'RGBa(0, 0, 0, 0.6)';
+    blackOverlay.style.width = main.clientWidth + 'px';
+    blackOverlay.style.height = main.clientHeight + 'px';
+    blackOverlay.style.backgroundColor = 'RGBa(0, 0, 0, 0.5)';
     blackOverlay.style.colorBlendMode = 'darken';
     blackOverlay.style.position = 'absolute';
     blackOverlay.style.top = 0;
