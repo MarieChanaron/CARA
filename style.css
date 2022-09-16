@@ -229,6 +229,7 @@ nav i.mobile {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 40px;
 }
 
 #hero h4 {
@@ -685,7 +686,7 @@ footer #copyright {
         display: none;
     }
     .section-p1 {
-        padding: 40px;
+        padding: 40px 40px;
     }
     header {
         padding: 0 40px;
@@ -775,7 +776,7 @@ footer #copyright {
 
 @media (max-width: 576px) {
     .section-p1 {
-        padding: 20px;
+        padding: 40px 20px;
     }
     header {
         padding: 0 20px;
@@ -871,10 +872,10 @@ footer #copyright {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 350px) {
     #features {
         gap: 10px;
-        padding: 10px;
+        padding: 40px 10px;
     }
     .products .product-card {
         flex-basis: 100%;
