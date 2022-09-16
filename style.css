@@ -46,6 +46,7 @@ body {
 /* GLOBAL SETTINGS */
 
 html{
+    scroll-behavior: smooth;
     font-family: 'Spartan', sans-serif;
     font-size: 62.5%;
 }
@@ -119,11 +120,11 @@ p.subtitle {
 }
 
 .section-p1 {
-    padding: 2.5vw 6vw;
+    padding: 40px 80px;
 }
 
 .section-m1 {
-    margin: 2.5vw 0px;
+    margin: 40px 0px;
 }
 
 
@@ -132,7 +133,7 @@ p.subtitle {
 /* HEADER */
 
 header {
-    padding: 0 6vw;
+    padding: 0 80px;
     height: 8vh;
     background-color: var(--mauve);
     box-shadow: 0px 5px 15px RGBa(0,0,0,0.06);
@@ -166,10 +167,6 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--green);
 }
- 
-nav ul li a:active {
-    text-decoration: underline;
-}
 
 nav ul li a:hover,
 nav ul li a.active {
@@ -180,17 +177,42 @@ nav ul li a:hover::after,
 nav ul li a.active::after {
     content: "";
     width: 30%;
-    height: 0.2rem;
+    height: 2px;
     background-color: var(--green);
     z-index: 1;
     position: absolute;
-    bottom: -0.4rem;
+    bottom: -4px;
     left: 20px;
 }
 
 header nav i {
+    font-weight: 500;
     font-size: 2rem;
 }
+
+.mobile {
+    display: none;
+}
+
+#nav-mobile i {
+    color: var(--charcoal);
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav i.mobile {
+    color: var(--ebony);
+    font-size: 24px;
+    border: 1px solid rgba(60, 63, 62, 0.3);
+    border-radius: 4px;
+    padding: 2px 6px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
 
 
 /* HERO SECTION */
@@ -209,7 +231,7 @@ header nav i {
 }
 
 #hero h4 {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 #hero button {
@@ -252,8 +274,7 @@ header nav i {
 }
 
 #features .feature-card img {
-    width: 150px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 #features .feature-card h6 {
@@ -276,6 +297,8 @@ header nav i {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 15px;
     padding-top: 40px;
 }
 
@@ -289,8 +312,6 @@ header nav i {
     border-radius: 25px;
     flex-basis: 22%;
     min-width: 200px;
-    margin: 15px 0;
-    column-gap: 15px;
     padding: 10px 12px;
     position: relative;
     cursor: pointer;
@@ -616,3 +637,120 @@ footer #copyright {
     font-size: 1.3rem;
     color: var(--kaki);
 }
+
+
+
+/* ============================================== */
+/* MEDIA QUERIES */
+
+@media (max-width: 1400px) {}
+
+@media (max-width: 1200px) {}
+
+
+
+@media (max-width: 992px) {
+    nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -40vw;
+        width: 40vw;
+        background-color: var(--mauve);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        flex-direction: column;
+        margin: 80px 15px;
+    }
+    nav ul li {
+        margin-bottom: 25px;
+    }
+    .mobile {
+        display: inline;
+    }
+    .large-screen {
+        display: none;
+    }
+    .section-p1 {
+        padding: 40px;
+    }
+    header {
+        padding: 0 40px;
+    }
+    #hero {
+        background-position: top 25% right 40%;
+    }
+    #features {
+        justify-content: center;
+        gap: 20px;
+    }
+    #features .feature-card {
+        margin: 0;
+    }
+    .products .all-products-cards {
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .products .product-card {
+        flex-basis: 40%;
+    }
+    #banner {
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
+    #banners-2 #line-1 {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    #banners-2 #line-1 #banner-left, #banners-2 #line-1 #banner-right {
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+        flex-basis: 100%;
+    }
+    #banners-2 #line-2 {
+        gap: 20px;
+    }
+    #banners-2 #line-2 #banner-1, #banners-2 #line-2 #banner-2, #banners-2 #line-2 #banner-3 {
+        flex-basis: 42%;
+        min-height: 150px;
+    }
+    #banners-2 h2 {
+        line-height: 3rem;
+        margin-bottom: 20px;
+    }
+    #banner-3 {
+        margin: auto;
+    }
+    #newsletter form input[type="email"] {
+        min-width: 300px;
+    }
+    footer #columns {
+        justify-content: flex-start;
+    }
+    footer .column {
+        margin-right: 70px;
+    }
+    footer .column:nth-child(1) {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    footer .column:nth-child(4) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    footer #copyright {
+        text-align: left;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+
+
+
+@media (max-width: 576px) {}

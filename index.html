@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bd008849fe.js" crossorigin="anonymous" async></script>
+    <script src="script.js" async></script>
     <title>CARA</title>
 </head>
 
@@ -23,16 +24,26 @@
             <img src="img/logo.png" alt="Logo">
         </a>
 
-        <nav>
+        <nav id="navigation">
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="large-screen">
+                    <a href="cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
             </ul>
+            <i class="fa-solid fa-xmark mobile"></i>
         </nav>
+        
+        <div id="nav-mobile" class="mobile">
+            <i id="cart" class="fa-solid fa-bag-shopping"></i>
+            <i id="burger" class="fas fa-outdent"></i>
+        </div>
 
     </header>
 
@@ -476,10 +487,12 @@
                 <h4>Sign Up For Newsletters</h4>
                 <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
             </div>
-            <form action="post">
-                <input type="email" name="email-input" id="email-input" placeholder="Your email address">
-                <input type="submit" value="Sign Up">
-            </form>
+            <div id="form">
+                <form action="post">
+                    <input type="email" name="email-input" id="email-input" placeholder="Your email address">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
         </section>
 
     </main>
