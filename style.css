@@ -773,7 +773,7 @@ footer #copyright {
 
 
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) { */
     .section-p1 {
         padding: 20px;
     }
@@ -805,7 +805,7 @@ footer #copyright {
     #banners-2 #line-2 {
         gap: 20px;
     }
-}
+/* } */
 
 
 
