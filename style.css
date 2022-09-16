@@ -205,7 +205,7 @@ nav i.mobile,
 nav i.mobile {
     color: var(--ebony);
     font-size: 24px;
-    border: 1px solid rgba(60, 63, 62, 0.3);
+    border: 1px solid #b39ad27d;
     border-radius: 4px;
     padding: 2px 6px;
     position: absolute;
