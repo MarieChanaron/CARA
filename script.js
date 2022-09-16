@@ -10,7 +10,7 @@ function slideIn() {
 }
 
 function slideOut() {
-    menu.style.right = '-40vw';
+    menu.style.right = '-250px';
     menu.style.transitionDuration = '0.2s';
 }
 
