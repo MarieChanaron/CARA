@@ -660,7 +660,6 @@ footer #copyright {
 }
 
 
-
 @media (max-width: 992px) {
     nav {
         height: 100vh;
@@ -759,7 +758,6 @@ footer #copyright {
 }
 
 
-
 @media (max-width: 768px) {
     #features .feature-card {
         flex-shrink: 1;
@@ -771,7 +769,6 @@ footer #copyright {
         font-size: 1rem;
     }
 }
-
 
 
 @media (max-width: 576px) {
@@ -809,13 +806,11 @@ footer #copyright {
 }
 
 
-
 @media (max-width: 540px) {
     #banners-2 #line-2 #banner-1, #banners-2 #line-2 #banner-2, #banners-2 #line-2 #banner-3 {
         flex-basis: 100%;
     }
 }
-
 
 
 @media (max-width: 500px) {
