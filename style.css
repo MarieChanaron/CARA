@@ -866,7 +866,8 @@ footer #copyright {
     #newsletter form input[type="submit"] {
         border-radius: 4px;
         margin: 10px auto 0;
-        padding: 15px 30px;
+        min-height: 44px;
+        min-width: 119px;
     }
 }
 
