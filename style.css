@@ -698,7 +698,7 @@ footer #copyright {
         justify-content: center;
         gap: 20px;
     }
-    #features .feature-card {
+    #features .wrapper .feature-card {
         margin: 0;
     }
     .products .all-products-cards {
@@ -760,14 +760,12 @@ footer #copyright {
 
 
 @media (max-width: 768px) {
-    #features .feature-card {
+
+    #features .wrapper .feature-card {
         flex-shrink: 1;
     }
-    #features .feature-card {
-        width: 100px;
-    }
-    #features .feature-card h6 {
-        font-size: 1rem;
+    #features .wrapper .feature-card {
+        max-width: 120px;
     }
 }
 
@@ -817,10 +815,17 @@ footer #copyright {
     #banners-2 #line-2 #banner-1, #banners-2 #line-2 #banner-2, #banners-2 #line-2 #banner-3 {
         flex-basis: 100%;
     }
+    #features .wrapper .feature-card {
+        width: 100px;
+        padding: 15px 10px;
+    }
 }
 
 
 @media (max-width: 500px) {
+    #features .wrapper .feature-card {
+        padding: 10px 5px;
+    }
     .products .product-card {
         min-width: 170px;
         flex-basis: 40%;
@@ -850,6 +855,9 @@ footer #copyright {
 
 
 @media (max-width: 450px) {
+    #features .wrapper .feature-card{
+        flex-basis: 40%;
+    }
     .products .all-products-cards {
         column-gap: 20px;
         row-gap: 20px;
@@ -879,7 +887,7 @@ footer #copyright {
         gap: 10px;
     }
     #features .wrapper .feature-card {
-        padding: 15px 10px;
+        padding: 13px 8px;
     }
     .products .product-card {
         flex-basis: 100%;
@@ -899,6 +907,9 @@ footer #copyright {
     }
     #features .wrapper .feature-card {
         max-width: 150px;
+    }
+    #features .feature-card h6 {
+        font-size: 1rem;
     }
 }
 
