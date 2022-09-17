@@ -253,16 +253,16 @@ nav i.mobile {
 
 /* FEATURES SECTION */
 
-#features {
+#features .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
 }
 
-#features .feature-card {
+#features .wrapper .feature-card {
     padding: 25px 15px;
-    margin: 15px 0;
+    /* margin: 15px 0; */
     border: 1px solid var(--pastelmint);
     border-radius: 4px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
@@ -272,27 +272,27 @@ nav i.mobile {
     align-items: center;
 }
 
-#features .feature-card:hover{
+#features .wrapper .feature-card:hover{
     box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
 }
 
-#features .feature-card img {
+#features .wrapper .feature-card img {
     margin-bottom: 10px;
     width: 100%;
 }
 
-#features .feature-card h6 {
+#features .wrapper .feature-card h6 {
     padding: 9px 8px 6px 8px;
     color: var(--green);
     border-radius: 4px;
 }
 
-#features .feature-card:nth-child(1) h6 {background-color: var(--palepink);}
-#features .feature-card:nth-child(2) h6 {background-color: var(--palegreen);}
-#features .feature-card:nth-child(3) h6 {background-color: var(--paleblue);}
-#features .feature-card:nth-child(4) h6 {background-color: var(--palenavy);}
-#features .feature-card:nth-child(5) h6 {background-color: var(--palepurple);}
-#features .feature-card:nth-child(6) h6 {background-color: var(--paleorange);}
+#features .wrapper .feature-card:nth-child(1) h6 {background-color: var(--palepink);}
+#features .wrapper .feature-card:nth-child(2) h6 {background-color: var(--palegreen);}
+#features .wrapper .feature-card:nth-child(3) h6 {background-color: var(--paleblue);}
+#features .wrapper .feature-card:nth-child(4) h6 {background-color: var(--palenavy);}
+#features .wrapper .feature-card:nth-child(5) h6 {background-color: var(--palepurple);}
+#features .wrapper .feature-card:nth-child(6) h6 {background-color: var(--paleorange);}
 
 
 /* FEATURED PRODUCTS */
@@ -694,7 +694,8 @@ footer #copyright {
     #hero {
         background-position: top 25% right 40%;
     }
-    #features {
+    #features .wrapper {
+        background-color: red;
         justify-content: center;
         gap: 20px;
     }
@@ -796,10 +797,16 @@ footer #copyright {
         height: 400px;
         background-position: top 25% right 45%;
     }
+    #features .wrapper .feature-card {
+        flex-grow: 1;
+    }
     .products .all-products-cards {
         justify-content: center;
         column-gap: 15px;
         row-gap: 15px;
+    }
+    .products .product-card {
+        min-width: 180px;
     }
     #banners-2 #line-2 {
         gap: 20px;
@@ -855,11 +862,8 @@ footer #copyright {
         width: 100%;
     }
     #newsletter form {
-        width: 100%;
-        display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+        align-content: stretch;
     }
     #newsletter form input[type="email"] {
         border-radius: 4px;
@@ -867,15 +871,16 @@ footer #copyright {
     #newsletter form input[type="submit"] {
         border-radius: 4px;
         margin: 10px auto 0;
-        padding: 15px 30px;
     }
 }
 
 
 @media (max-width: 350px) {
-    #features {
+    #features .wrapper {
         gap: 10px;
-        padding: 40px 10px;
+    }
+    #features .wrapper .feature-card {
+        padding: 15px 10px;
     }
     .products .product-card {
         flex-basis: 100%;
@@ -893,16 +898,28 @@ footer #copyright {
     #nav-mobile i {
         margin-left: 10px;
     }
-    #features .feature-card {
-        flex-grow: 1;
+    #features .wrapper .feature-card {
         max-width: 150px;
     }
 }
 
 
 @media (max-width: 300px) {
-    #features .feature-card {
-        flex-grow: 1;
-        max-width: 90px;
+    #features .wrapper .feature-card {
+        padding: 8px 5px;
+    }
+}
+
+
+@media (max-width: 280px) {
+    #features .wrapper {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    #features .wrapper .feature-card {
+        padding: 8px 2px;
+    }
+    #features .wrapper .feature-card img {
+        max-width: 100px;
     }
 }

@@ -36,15 +36,18 @@ function slideIn() {
 
     menu.style.right = 0;
     menu.style.transitionDuration = duration;
+    
 }
 
 function slideOut() {
+
     const blackOverlay1 = document.querySelector('div.overlay1');
     const blackOverlay2 = document.querySelector('div.overlay2');
     blackOverlay1.remove();
     blackOverlay2.remove();
     menu.style.right = '-250px';
     menu.style.transitionDuration = duration;
+
 }
 
 burger.addEventListener('click', slideIn);
