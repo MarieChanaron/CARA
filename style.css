@@ -576,6 +576,7 @@ footer #columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer #columns .column #follow {
@@ -590,6 +591,10 @@ footer #columns .column h4 {
     font-size: 1.4rem;
     margin-bottom: 20px;
     color: var(--ebony);
+}
+
+footer #columns .m-top {
+    margin-top: 50px;
 }
 
 footer #columns .column p,
@@ -646,6 +651,10 @@ footer #copyright {
     text-align: center;
     font-size: 1.3rem;
     color: var(--kaki);
+}
+
+footer.clear-float {
+    clear: left;
 }
 
 
@@ -750,7 +759,6 @@ footer #copyright {
         margin-bottom: 50px;
     }
     footer .column:nth-child(4) {
-        margin-top: 50px;
         margin-bottom: 50px;
     }
     footer #copyright {
@@ -828,7 +836,6 @@ footer #copyright {
     }
     .products .product-card {
         min-width: 170px;
-        flex-basis: 40%;
     }
     footer #columns .column h4 {
         margin-top:  50px;
